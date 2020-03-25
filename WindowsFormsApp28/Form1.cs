@@ -114,5 +114,30 @@ namespace WindowsFormsApp28
                 cep.Focus();
             }
         }
-}
+
+        private void hepsi_Click(object sender, EventArgs e)
+        {
+            Form frmShow = new Form();
+            TextBox fa = new TextBox();
+            frmShow.StartPosition = FormStartPosition.CenterScreen;
+            frmShow.Font = this.Font;
+            frmShow.Size = this.Size;
+            fa.ReadOnly = true;
+            frmShow.Text = "TÜM LİSTE";
+            fa.BackColor = this.BackColor;
+            fa.Multiline = true;
+            fa.Dock = DockStyle.Fill;
+
+            frmShow.Controls.Add(fa);
+            
+           
+
+            StreamReader sr = new StreamReader("data.txt");
+            string strAll = sr.ReadToEnd();
+            sr.Close();
+            fa.Text = strAll;
+            frmShow.ShowDialog();
+
+        }
+    }
 }

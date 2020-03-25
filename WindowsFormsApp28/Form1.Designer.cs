@@ -157,6 +157,7 @@
             this.hepsi.Text = "Liste Göster";
             this.toolTip1.SetToolTip(this.hepsi, "tüm listeyi göster");
             this.hepsi.UseVisualStyleBackColor = true;
+            this.hepsi.Click += new System.EventHandler(this.hepsi_Click);
             // 
             // çik
             // 
