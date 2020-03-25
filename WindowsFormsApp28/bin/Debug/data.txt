@@ -1,2 +1,4 @@
 hatice;534;ali
 maj;666;dqaf
+ali;587;libya
+mehmet;111;istanbul

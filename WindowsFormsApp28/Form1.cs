@@ -30,15 +30,15 @@ namespace WindowsFormsApp28
         private void Ekle_Click(object sender, EventArgs e)
         {
 
-            if ( cep.Text.Trim()== ""|| isim.Text.Trim() == "" || adres.Text.Trim() == "" )
+            if (cep.Text.Trim() == "" || isim.Text.Trim() == "" || adres.Text.Trim() == "")
             {
-                MessageBox.Show( " Lütfen bilgileri tüm yazın ") ;
+                MessageBox.Show(" Lütfen bilgileri tüm yazın ");
                 return;
             }
 
-            StreamReader kontrol = new StreamReader("date.txt");
-                string strKontrol = kontrol.ReadToEnd();
-                kontrol.Close();
+            StreamReader kontrol = new StreamReader("data.txt");
+            string strKontrol = kontrol.ReadToEnd();
+            kontrol.Close();
             if (strKontrol.Contains(cep.Text + ";")) // aynı numara tekrarlamamak için 
             {
                 MessageBox.Show("girdiğiniz cep no sistemde mevcuttur!");
@@ -48,7 +48,7 @@ namespace WindowsFormsApp28
             }
             else
             {
-                StreamWriter sw = new StreamWriter("date.txt", true);
+                StreamWriter sw = new StreamWriter("data.txt", true);
                 string strkisi = isim.Text + ";"
                            + cep.Text + ";"
                            + adres.Text;
@@ -70,48 +70,49 @@ namespace WindowsFormsApp28
             }
 
 
-           
-    }
+
+        }
 
         private void ara_Click(object sender, EventArgs e)
         {
-            if (cep.Text.Trim() != "") // cep num. yazılmadığında 
+            if (cep.Text.Trim() != "") // eğer cep satrı boş değilse arama işlemi yapılacak.
             {
-                StreamReader sr = new StreamReader("date.txt");
-                String satir = "";
+                StreamReader sr = new StreamReader("data.txt");
+                string satir = ""; // her döndüğünüzde satir değerleri taşıyacaktır.
                 bool bul = false;
+
                 do
                 {
-                    sr.ReadLine();
-                    if (satir != null) // son satır boşsa
+                    satir = sr.ReadLine();   
+                    if(satir !=null) // satir boş değil ise
                     {
                         string[] arrData = satir.Split(';');
                         if (arrData[1] == cep.Text)
                         {
-                            
                             isim.Text = arrData[0];
                             cep.Text = arrData[1];
                             adres.Text = arrData[2];
                             bul = true;
                             break;
-
                         }
-                       
-                    }
-                } while (satir != null); // doya boş olunca
-                sr.Close();
-                if ( !bul)
-                {
-                    MessageBox.Show(" bu numara kayirli değil !");
-                }
 
+
+                    }
+
+
+                } while (satir != null); // dosya boş ise
+                sr.Close();
+                if (!bul)
+                {
+                    MessageBox.Show("Aradığınız cep numara kayıtlı değildir !");
+
+                }
             }
-            else
+            else // cep satri bos ise
             {
-                MessageBox.Show(" Lütfen cep numara yazın !");
+                MessageBox.Show("Aramak istediniz cep num. yazın !");
                 cep.Focus();
             }
-
-    }
+        }
 }
 }
