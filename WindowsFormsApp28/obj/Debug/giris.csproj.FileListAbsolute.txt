@@ -1,0 +1,10 @@
+C:\Users\Ali kende\source\repos\WindowsFormsApp28\WindowsFormsApp28\bin\Debug\WindowsFormsApp28.exe.config
+C:\Users\Ali kende\source\repos\WindowsFormsApp28\WindowsFormsApp28\bin\Debug\WindowsFormsApp28.exe
+C:\Users\Ali kende\source\repos\WindowsFormsApp28\WindowsFormsApp28\bin\Debug\WindowsFormsApp28.pdb
+C:\Users\Ali kende\source\repos\WindowsFormsApp28\WindowsFormsApp28\obj\Debug\giris.csprojAssemblyReference.cache
+C:\Users\Ali kende\source\repos\WindowsFormsApp28\WindowsFormsApp28\obj\Debug\WindowsFormsApp28.Form1.resources
+C:\Users\Ali kende\source\repos\WindowsFormsApp28\WindowsFormsApp28\obj\Debug\WindowsFormsApp28.Properties.Resources.resources
+C:\Users\Ali kende\source\repos\WindowsFormsApp28\WindowsFormsApp28\obj\Debug\giris.csproj.GenerateResource.cache
+C:\Users\Ali kende\source\repos\WindowsFormsApp28\WindowsFormsApp28\obj\Debug\giris.csproj.CoreCompileInputs.cache
+C:\Users\Ali kende\source\repos\WindowsFormsApp28\WindowsFormsApp28\obj\Debug\WindowsFormsApp28.exe
+C:\Users\Ali kende\source\repos\WindowsFormsApp28\WindowsFormsApp28\obj\Debug\WindowsFormsApp28.pdb
